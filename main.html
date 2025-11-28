@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--<a href="https://www.flaticon.com/free-icons/privacy" title="privacy icons">Privacy icons created by meaicon - Flaticon</a>--> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lock.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="backend.js">
+    </script>
+    <title>Password Generator</title>
+</head>
+<body onload="characterValue()">
+
+    <header>
+
+        <img src="lock.png" alt="lock" height="40px" width="40px">
+        <h1>Password Generator</h1>
+    </header>
+    
+    <div class="main-text">
+        <h1>Safe. Strong. Secure. Try this password generator.</h1>
+        <h2>Creating a strong password keeps you and your data safe.</h2>
+    </div>
+    <div class="form-content">
+        <form action="">
+            <p>Customize password</p>
+            <hr>
+            <div class="Characters-row">
+                <label for="Characters">Characters</label>
+                <input onchange="characterValue()" type="range" name="Characters" id="Characters" min="8" max="30">
+                <p class="Characters-value"></p>
+            </div>
+            <hr>
+            <label for="Numbers">Numbers</label>
+            <input onchange="checkChange('numbers')" type="checkbox" name="Numbers" id="Numbers" value="numbers">
+            <label for="Symbols">Symbols</label>
+            <input onchange="checkChange('symbols')" type="checkbox" name="Symbols" id="Symbols" value="symbols"> <br>
+            <hr>
+            <p>Generated password</p>
+            <div class="generated-password">
+
+            </div>
+        </form>
+        <div class="form-buttons">
+            <button onclick="copy()">Copy</button>
+            <button onclick="generatePassword()">Generate</button>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Mark Chaitra. All rights reserved.
+    </footer>
+</body>
+</html>

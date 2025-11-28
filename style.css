@@ -1,0 +1,79 @@
+html, body{
+    padding: 0%;
+    margin: 0%;
+    height: 100vh;
+    background-color: rgb(38, 95, 145);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    display: flex; align-items: center;
+    position: absolute;
+    top: 1%;
+    padding: 0px 10px;
+    background-color: white;
+    border-radius: 40px;
+}
+.main-text{
+    color: white;
+    width: 40%; margin: 60px;
+}
+.main-text h1{
+    font-size: 50px;
+}
+.form-content{
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+}
+form > *{
+    margin: 10px;
+    margin-top: 25px;
+}
+hr, label{
+    color: rgb(123, 123, 123);
+}
+.Characters-value{
+    width: 40px; height: 25px;
+    border: 1px solid black; border-radius: 10px;
+    text-align: center;
+    align-content: center;
+
+}
+.Characters-row{
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+.Characters-row > *{
+    margin: 5px;
+}
+.generated-password{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50px;
+    display: flex; justify-content: center; align-items: center;
+}
+.form-buttons{
+    display: flex; width: 100%;
+}
+.form-buttons button{
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(60, 125, 199);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+footer{
+    position: absolute;
+    bottom: 1%;
+    color: white;
+}
