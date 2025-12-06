@@ -1,67 +1,97 @@
-html, body{
-    padding: 0%;
-    margin: 0%;
-    height: 100vh;
+html, body {
+    padding: 0;
+    margin: 0;
     background-color: rgb(38, 95, 145);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/* ----- HEADER ----- */
 header{
-    display: flex; align-items: center;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    position: fixed;
     top: 1%;
-    padding: 0px 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 20px;
     background-color: white;
     border-radius: 40px;
+    z-index: 10;
 }
-.main-text{
+
+header h1{
+    margin-left: 10px;
+}
+
+/* ----- CENTERED LAYOUT ----- */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ----- LEFT TEXT BOX ----- */
+.main-text {
     color: white;
-    width: 40%; margin: 60px;
+    width: 40%;
 }
+
 .main-text h1{
     font-size: 50px;
 }
-.form-content{
+
+/* ----- FORM BOX ----- */
+.form-content {
     color: black;
     background-color: white;
     padding: 20px;
     border-radius: 20px;
     width: 30%;
 }
+
+/* form spacing */
 form > *{
-    margin: 10px;
-    margin-top: 25px;
+    margin: 10px 0;
 }
+
 hr, label{
     color: rgb(123, 123, 123);
 }
+
 .Characters-value{
-    width: 40px; height: 25px;
-    border: 1px solid black; border-radius: 10px;
+    width: 40px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
     text-align: center;
     align-content: center;
-
 }
+
 .Characters-row{
     display: flex;
     align-items: center;
-    margin-left: 8px;
+    gap: 10px;
 }
-.Characters-row > *{
-    margin: 5px;
-}
+
 .generated-password{
     border: 1px solid black;
     border-radius: 10px;
     height: 50px;
-    display: flex; justify-content: center; align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* ----- BUTTONS ----- */
 .form-buttons{
-    display: flex; width: 100%;
+    display: flex;
+    width: 100%;
 }
+
 .form-buttons button{
     flex: 1;
     padding: 10px;
@@ -72,11 +102,53 @@ hr, label{
     cursor: pointer;
     font-size: 15px;
 }
+
+/* ----- FOOTER ----- */
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
 }
+
 footer a{
     color: white;
+}
+
+
+/* ----- MOBILE / SMALL SCREENS ----- */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        height: auto;
+        padding-top: 120px; 
+        padding-bottom: 80px; 
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .main-text {
+        width: 70%;
+    }
+    
+    .main-text h1 {
+        font-size: 35px;
+    }
+
+    .form-content {
+        width: 70%;
+    }
+
+    header {
+        position: fixed;
+        top: 10px;
+        width: auto;
+    }
+
+    footer {
+        position: relative; 
+        margin-top: 50px;
+        text-align: center;
+    }
 }
